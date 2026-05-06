@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Family Food Packets",
+    "type": "Food",
+    "organization": "Hope Relief NGO",
+    "location": "Patna Relief Camp",
+    "quantity": 120,
+    "availability": "Available",
+    "contact": "+91 98989 12000",
+    "notes": "Cooked meals and dry ration kits available from 8 AM to 6 PM.",
+    "updatedAt": "08:30:00 AM"
+  },
+  {
+    "id": 2,
+    "title": "Basic Medical Support",
+    "type": "Medicine",
+    "organization": "Health First Volunteers",
+    "location": "Bhubaneswar Mobile Clinic",
+    "quantity": 22,
+    "availability": "Limited",
+    "contact": "+91 97888 45000",
+    "notes": "First-aid, fever medicine, and doctor consultation for emergency cases.",
+    "updatedAt": "08:42:00 AM"
+  },
+  {
+    "id": 3,
+    "title": "Temporary Shelter Beds",
+    "type": "Shelter",
+    "organization": "Safe Stay Mission",
+    "location": "Guwahati School Shelter",
+    "quantity": 68,
+    "availability": "Available",
+    "contact": "+91 96555 22010",
+    "notes": "Separate space for women, children, and senior citizens.",
+    "updatedAt": "08:50:00 AM"
+  },
+  {
+    "id": 4,
+    "title": "Drinking Water Cans",
+    "type": "Water",
+    "organization": "Jal Sahayata Team",
+    "location": "Chennai East Zone",
+    "quantity": 30,
+    "availability": "Available",
+    "contact": "+91 98444 11223",
+    "notes": "Pickup point near the bus stand. Bring containers if possible.",
+    "updatedAt": "08:57:00 AM"
+  },
+  {
+    "id": 5,
+    "title": "Clothing and Blankets",
+    "type": "Clothing",
+    "organization": "Community Care Group",
+    "location": "Delhi Flood Support Center",
+    "quantity": 18,
+    "availability": "Limited",
+    "contact": "+91 97777 66789",
+    "notes": "Warm clothing, blankets, and baby essentials are prioritized.",
+    "updatedAt": "09:05:00 AM"
+  }
+]
