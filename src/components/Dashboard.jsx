@@ -39,6 +39,30 @@ function Dashboard() {
     fetchResources()
   }, [])
 
+  useEffect(() => {
+    if (!resources.length) {
+      return undefined
+    }
+
+    const intervalId = window.setInterval(() => {
+      setResources((currentResources) =>
+        currentResources.map((resource, index) => {
+          const quantityChange = index % 2 === 0 ? 5 : -3
+          const nextQuantity = Math.max(resource.quantity + quantityChange, 0)
+
+          return {
+            ...resource,
+            quantity: nextQuantity,
+            availability: nextQuantity > 25 ? 'Available' : 'Limited',
+            updatedAt: new Date().toLocaleTimeString(),
+          }
+        }),
+      )
+    }, 12000)
+
+    return () => window.clearInterval(intervalId)
+  }, [resources])
+
   const handleFilterChange = (event) => {
     const { name, value } = event.target
 
@@ -50,12 +74,12 @@ function Dashboard() {
 
   const handleAddResource = (newResource) => {
     setResources((currentResources) => [
-        {
-          id: Date.now(),
-          isUserAdded: true,
-          ...newResource,
-          updatedAt: new Date().toLocaleTimeString(),
-        },
+      {
+        id: Date.now(),
+        isUserAdded: true,
+        ...newResource,
+        updatedAt: new Date().toLocaleTimeString(),
+      },
       ...currentResources,
     ])
   }
@@ -108,8 +132,8 @@ function Dashboard() {
               <span>Matching current filters</span>
             </div>
             <div className="stat-card">
-              <strong>{resourceTypes.length - 1}</strong>
-              <span>Resource categories tracked</span>
+              <strong>12 sec</strong>
+              <span>Simulated live refresh cycle</span>
             </div>
           </div>
         </section>
@@ -150,7 +174,9 @@ function Dashboard() {
                   most relevant help quickly.
                 </p>
               </div>
-              <span className="secondary-chip">Community-submitted resource feed</span>
+              <span className="secondary-chip">
+                Live status updates every 12 seconds
+              </span>
             </div>
 
             {loading ? (
